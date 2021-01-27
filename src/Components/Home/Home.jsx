@@ -1,4 +1,5 @@
 import React from 'react';
+import Products from '../Products/Products';
 // image
 import BackImg from '../../images/background.jpeg';
 
@@ -13,6 +14,7 @@ const Home = () => {
           <h1>Welcome to our store</h1>
         </div>
       </div>
+      <Products />
     </>
   );
 };
