@@ -1,5 +1,7 @@
 import React from 'react';
+// components
 import Products from '../Products/Products';
+import Support from '../Support/Support';
 // image
 import BackImg from '../../images/background.jpeg';
 
@@ -14,6 +16,7 @@ const Home = () => {
           <h1>Welcome to our store</h1>
         </div>
       </div>
+      <Support />
       <Products />
     </>
   );
