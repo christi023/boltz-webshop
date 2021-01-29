@@ -1,20 +1,41 @@
-import React, { useState, useEffect } from 'react';
-//
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+// actions
+import { getItems, AddToCart, bannerClose } from '../../actions/itemActions';
+// Components
 import ProductCard from './ProductCard';
-import Data from './Data';
 // styles
 import './Products.css';
 
-const Products = () => {
-  const [state, setState] = useState(Data);
+const Products = (props) => {
+  useEffect(() => {
+    props.getItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // add to cart
+  const AddToCart = (id) => {
+    props.AddToCart(id);
+    // banner will show if item is already in cart
+    setTimeout(() => {
+      props.bannerClose();
+    }, 2000);
+  };
+
+  const { items } = props.item;
 
   return (
     <div className="products">
       <div className="inside-container">
         <h3>Products</h3>
         <div className="products-center">
-          {state.map((product) => (
-            <ProductCard key={product._id} data={product} />
+          {items.map((product) => (
+            <ProductCard
+              key={product._id}
+              data={product}
+              AddToCart={() => AddToCart(product._id)}
+              isInCart={product.isInCart}
+            />
           ))}
         </div>
       </div>
@@ -22,4 +43,8 @@ const Products = () => {
   );
 };
 
-export default Products;
+const mapStateToProps = (state) => ({
+  item: state.item,
+});
+
+export default connect(mapStateToProps, { getItems, AddToCart, bannerClose })(Products);
