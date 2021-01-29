@@ -1,3 +1,38 @@
+/********************** NAVBAR *********************/
 a {
   text-decoration: none !important;
+}
+
+.ml-auto a {
+  color: white !important;
+  padding: 8px;
+  text-decoration: none;
+  color: #f4f4f4;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.8em;
+  list-style: none;
+}
+
+.ml-auto a:hover {
+  color: #e7b6d7 !important;
+}
+.shopping-icon {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  font-size: 18px;
+}
+
+.shopping-icon span {
+  color: white;
+  position: absolute;
+  top: -11px;
+  left: 9px;
+  background: rgb(255, 0, 140);
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
 }
