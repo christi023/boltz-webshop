@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductCard = (props) => {
-  const { data } = props;
+  const { data, AddToCart, isInCart } = props;
 
   return (
     <div className="product">
@@ -16,9 +16,9 @@ const ProductCard = (props) => {
         <h4>${data.price}</h4>
       </div>
       <div className="product-btn">
-        <button>Add to cart</button>
+        <button onClick={AddToCart}>Add to cart</button>
       </div>
-      <div className="inCart">
+      <div className={isInCart ? 'inCart newInCart' : 'inCart'}>
         <span>Already in cart</span>
       </div>
     </div>
