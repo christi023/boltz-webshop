@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Data from '../Products/Data';
+//import Data from '../Products/Data';
+import { connect } from 'react-redux';
+import { getItems, AddToCart } from '../../actions/itemActions';
 // style
 import './Details.css';
 
 const Details = (props) => {
+  useEffect(() => {
+    props.getItems();
+  });
+
   const { id } = useParams();
   // getting details with id
-  let productDetails = Data.find((item) => item._id === parseInt(id));
-
-  console.log(useParams());
+  let productDetails = props.item.items.find((item) => item._id === parseInt(id));
 
   return (
     <div className="details">
       <div className="inside-container">
-        <h3>product details</h3>
+        <h3>Product Details</h3>
         <div className="details-center">
           <div className="details-img">
             <img src={`${productDetails.img}`} alt="product" />
@@ -31,7 +35,7 @@ const Details = (props) => {
               <Link to="/products">
                 <button>Back to products</button>
               </Link>
-              <button>Add to cart</button>
+              <button onClick={() => props.AddToCart(productDetails._id)}>Add to cart</button>
             </div>
           </div>
         </div>
@@ -40,4 +44,8 @@ const Details = (props) => {
   );
 };
 
-export default Details;
+const mapStateToProps = (state) => ({
+  item: state.item,
+});
+
+export default connect(mapStateToProps, { getItems, AddToCart })(Details);
