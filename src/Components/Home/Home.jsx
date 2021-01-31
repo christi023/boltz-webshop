@@ -2,6 +2,8 @@ import React from 'react';
 // components
 import Products from '../Products/Products';
 import Support from '../Support/Support';
+import Collection from '../Collection/Collection';
+import Footer from '../Footer/Footer';
 // image
 import BackImg from '../../images/background.jpeg';
 
@@ -17,7 +19,9 @@ const Home = () => {
         </div>
       </div>
       <Support />
+      <Collection />
       <Products />
+      <Footer />
     </>
   );
 };
