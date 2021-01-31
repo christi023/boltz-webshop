@@ -5,8 +5,9 @@ import { deleteItem, increaseItem, decreaseItem, getTotals } from '../../actions
 // style
 import './Cart.css';
 
-const Cart = (props) => {
+function Cart(props) {
   const { cart } = props.item;
+  // method for getting subtotal
   const total = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
 
   useEffect(() => {
@@ -93,7 +94,7 @@ const Cart = (props) => {
       </div>
     </div>
   );
-};
+}
 
 const mapStateToProps = (state) => ({
   item: state.item,
