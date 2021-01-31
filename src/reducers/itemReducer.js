@@ -19,7 +19,7 @@ const initialState = {
   shipping: 10,
 };
 
-export const itemReducer = (state = initialState, action) => {
+const itemReducer = (state = initialState, action) => {
   switch (action.type) {
     // get initial state
     case GET_ITEMS:
@@ -123,3 +123,5 @@ export const itemReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export default itemReducer;
