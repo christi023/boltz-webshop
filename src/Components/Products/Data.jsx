@@ -5,7 +5,7 @@ const Data = [
     title: 'Off White  Dress',
     price: '123',
     details:
-      'Nike is the newest trend and design from the company with best materials.It provides the best feeling for your foots and and your health',
+      'Sleeveless dress in cotton jersey with a nice design. Gathered seam at waist and flared skirt.',
     quantity: 1,
     isInCart: false,
   },
@@ -16,7 +16,7 @@ const Data = [
     title: 'Denim Jacket',
     price: '155',
     details:
-      'Nike Air with a very nice outfit and design. This model provides you a cool fit of your foots and are suitable for every occasion',
+      'Fitted jacket in blue stretch denim with buttons at front, chest pockets with flap and button, and side pockets.',
     quantity: 1,
     isInCart: false,
   },
@@ -24,10 +24,10 @@ const Data = [
   {
     _id: 3,
     img: 'https://demo.htmlcodex.com/1176/bootstrap-shop-template/img/product-3.jpg',
-    title: 'Soft Leather Jacket',
+    title: 'Faux Leather Jacket',
     price: '205',
     details:
-      'Red converse All Star. This shoes are suitable for more official events. With this shoes you will gain all the attention around you (not negative)',
+      'Jacket in faux leather. Collar, zipper at front, and welt front pockets. Ribbing at cuffs and hem.',
     quantity: 1,
     isInCart: false,
   },
@@ -37,8 +37,7 @@ const Data = [
     img: 'https://demo.htmlcodex.com/1176/bootstrap-shop-template/img/product-4.jpg',
     title: 'Fitted Black Dress',
     price: '80',
-    details:
-      'White snow shoes for every difficult ocassions which has to do with snow sports. Very good fit and feeling for your foots.',
+    details: 'Short, fitted, sleeveless dress in stretch fabric with narrow shoulder straps..',
     quantity: 1,
     isInCart: false,
   },
@@ -46,10 +45,10 @@ const Data = [
   {
     _id: 5,
     img: 'https://demo.htmlcodex.com/1176/bootstrap-shop-template/img/product-5.jpg',
-    title: 'Colorful Jersey',
+    title: 'Printed Jersey',
     price: '45',
     details:
-      'This shoes has been created from the best materials and provides you a good feeling for your foots. Are good for mountains and every hard occasions.',
+      'Short-sleeved tops in soft cotton jersey with a printed design. Narrow trim at neckline.',
     quantity: 1,
     isInCart: false,
   },
@@ -60,7 +59,7 @@ const Data = [
     title: 'Black Suede Jacket',
     price: '307',
     details:
-      'Black aliens shoes are one of the best trends nowadays.The design and fit are very nice and the only sure thing is that you will love wearing it.',
+      'Black suede are one of the best trends nowadays.The design and fit are very nice and the only sure thing is that you will love wearing it.',
     quantity: 1,
     isInCart: false,
   },
@@ -68,10 +67,10 @@ const Data = [
   {
     _id: 7,
     img: 'https://demo.htmlcodex.com/1176/bootstrap-shop-template/img/product-7.jpg',
-    title: 'Black Stylish Jacket',
+    title: 'Black Wool Coat',
     price: '23',
     details:
-      'Nike pigasous is another interesting shoes model from the nike company. It is very nice for your foots and surely you will not regret your choice.',
+      'Coat in a felted wool blend. Stand-up collar with concealed snap fasteners, concealed zipper at front, and yoke at back. Diagonal side pockets and two inner pockets. Lined. Wool content is recycled and polyester content is partly recycled.',
     quantity: 1,
     isInCart: false,
   },
@@ -81,8 +80,7 @@ const Data = [
     img: 'https://demo.htmlcodex.com/1176/bootstrap-shop-template/img/product-8.jpg',
     title: 'Blue soft shirt',
     price: '15',
-    details:
-      'Bob marley shoes is a special design shoes in the memory of the the famous singer .This shoes provides you a good feeling of your foots.',
+    details: 'Crew-neck shirt in soft, organic cotton. Straight-cut hem',
     quantity: 1,
     isInCart: false,
   },
@@ -90,10 +88,9 @@ const Data = [
   {
     _id: 9,
     img: 'https://demo.htmlcodex.com/1176/bootstrap-shop-template/img/cat-2.jpg',
-    title: 'Louis Vuitton top',
+    title: 'Stylish top',
     price: '135',
-    details:
-      'Louis Vuitton Run Away Sneaker Charcoal in color Louis Vuitton Sneakers Men Black. Great luxury sneakers made with high quality materials.Fun, fresh, or fabulous shoes complete an outfit. Find your perfect pair with updates on the hottest trends.',
+    details: 'Long-sleeved top in woven, crêped fabric. Off shoulder soft draping and Unlined.',
     quantity: 1,
     isInCart: false,
   },
@@ -104,7 +101,7 @@ const Data = [
     title: 'Blossom Bag',
     price: '179',
     details:
-      'Nice Cheap Dunk High Pro Cherry Blossom - Nike Mens Sb Dunk High Pro Cherry Blossom Sneakers.The collection comes in a limited edition and features an exclusive update of the Cherry',
+      'Small Blossom bag in woven fabric. Zip and two handles at top, adjustable shoulder strap, and inner compartment with zip. Lined. Size 4 3/4 x 13 3/4 x 16 1/2 in.',
     quantity: 1,
     isInCart: false,
   },
@@ -114,7 +111,7 @@ const Data = [
     title: 'Olympus Camera',
     price: '224',
     details:
-      'Nice Cheap Dunk High Pro Cherry Blossom - Nike Mens Sb Dunk High Pro Cherry Blossom Sneakers.The collection comes in a limited edition and features an exclusive update of the Cherry',
+      'This camera is one of the most go to cameras you can find, it is water proof and takes great pictures for both indoors and outdoors. Easy to carry anywhere with you.',
     quantity: 1,
     isInCart: false,
   },
@@ -123,8 +120,7 @@ const Data = [
     img: 'https://demo.htmlcodex.com/1176/bootstrap-shop-template/img/cat-6.jpg',
     title: 'Merrell Shoes',
     price: '100',
-    details:
-      'Nice Cheap Dunk High Pro Cherry Blossom - Nike Mens Sb Dunk High Pro Cherry Blossom Sneakers.The collection comes in a limited edition and features an exclusive update of the Cherry',
+    details: 'Lacing at front and loop at back. Mesh lining, mesh insoles, and flat balance soles.',
     quantity: 1,
     isInCart: false,
   },

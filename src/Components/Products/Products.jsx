@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { getItems, AddToCart, bannerClose } from '../../actions/itemActions';
 // Components
 import ProductCard from './ProductCard';
+import Loader from '../Loader/Loader';
+
 // styles
 import './Products.css';
 
@@ -29,14 +31,18 @@ const Products = (props) => {
       <div className="inside-container">
         <h3>Products</h3>
         <div className="products-center">
-          {items.map((product) => (
-            <ProductCard
-              key={product._id}
-              data={product}
-              AddToCart={() => AddToCart(product._id)}
-              isInCart={product.isInCart}
-            />
-          ))}
+          {items ? (
+            items.map((product) => (
+              <ProductCard
+                key={product._id}
+                data={product}
+                AddToCart={() => AddToCart(product._id)}
+                isInCart={product.isInCart}
+              />
+            ))
+          ) : (
+            <Loader />
+          )}
         </div>
       </div>
     </div>

@@ -16,8 +16,8 @@
   text-decoration: underline;
 }
 
-.box-img {
-  background: rgb(226, 224, 224);
+.box-img img {
+  background: rgb(138, 134, 134) !important;
 }
 
 .product img {
