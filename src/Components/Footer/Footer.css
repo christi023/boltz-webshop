@@ -105,39 +105,31 @@
 
 #footer .footer-top .footer-newsletter form {
   margin-top: 30px;
-  background: #28251f;
-  padding: 6px 10px;
+  padding-bottom: -2px;
+  background: #fff;
+  padding-right: 26px;
   position: relative;
-  border-radius: 50px;
-  border: 1px solid #454035;
+  border-radius: 4px;
 }
 
 #footer .footer-top .footer-newsletter form input[type='email'] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-  background: #28251f;
-  color: white;
+  border: 0px;
+  padding: 6px;
+  width: calc(138% - 110px);
 }
 
 #footer .footer-top .footer-newsletter form input[type='submit'] {
   position: absolute;
-  top: -1px;
-  right: -1px;
-  bottom: -1px;
-  border: 0;
   background: none;
   font-size: 16px;
-  padding: 0 20px 2px 20px;
-  background: #6d2d5d;
+  padding: 5px;
+  background: rgb(177, 73, 159);
   color: #fff;
-  transition: 0.3s;
-  border-radius: 50px;
-  outline: none;
+  margin-top: 10px;
 }
 
 #footer .footer-top .footer-newsletter form input[type='submit']:hover {
-  background: #a3367f;
+  background: rgb(161, 62, 128);
 }
 
 #footer .copyright {
@@ -173,11 +165,10 @@
     align-self: center;
   }
 }
-/*
+
 @media (max-width: 875px) {
   .img-fluid {
     margin-left: 13rem !important;
     padding-top: 2em;
   }
 }
-*/

@@ -99,6 +99,8 @@ export default function Footer() {
                 <input type="email" name="email" placeholder="Your Email" />
                 <input type="submit" value="Subscribe" />
               </Form>
+              <br />
+              <br />
             </Col>
           </Row>
         </div>
@@ -112,7 +114,7 @@ export default function Footer() {
           <Link to="/">BOLTZ</Link>
         </div>
 
-        <img class="img-fluid" src={payment} alt="" />
+        <img className="img-fluid" src={payment} alt="" />
       </div>
     </footer>
   );
