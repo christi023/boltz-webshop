@@ -3,6 +3,7 @@ import React from 'react';
 import Products from '../Products/Products';
 import Support from '../Support/Support';
 import Collection from '../Collection/Collection';
+import HomeVideo from '../HomeVideo/HomeVideo';
 import Footer from '../Footer/Footer';
 // image
 import BackImg from '../../images/background.jpeg';
@@ -21,6 +22,7 @@ const Home = () => {
       <Support />
       <Collection />
       <Products />
+      <HomeVideo />
       <Footer />
     </>
   );
