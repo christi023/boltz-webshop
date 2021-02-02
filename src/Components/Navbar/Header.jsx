@@ -35,7 +35,7 @@ const Header = (props) => {
                 </div>
                 Cart
               </Link>
-              <Link to="/login">
+              <Link to="/register">
                 <i className="fas fa-user"></i> Sign In
               </Link>
             </Nav>
