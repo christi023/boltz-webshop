@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-//import Data from '../Products/Data';
 import { connect } from 'react-redux';
 import { getItems, AddToCart } from '../../actions/itemActions';
 // style
@@ -9,7 +8,8 @@ import './Details.css';
 const Details = (props) => {
   useEffect(() => {
     props.getItems();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const { id } = useParams();
   // getting details with id
