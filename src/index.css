@@ -1,5 +1,64 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0px;
   padding: 0;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(252, 245, 245);
+}
+/*
+html {
+  min-width: 120vw;
+} */
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {
+  body {
+    width: 120%;
+  }
+}
+
+/* Extra Small Devices, Phones */
+/*
+@media only screen and (min-width: 480px) {
+  body {
+    width: 90%;
+  }
+  html {
+    min-width: 220vw;
+  }
+} */
+
+/* Small Devices, Tablets */
+/*
+@media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+}*/
+/*
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+
+/* Medium Devices, Desktops */
+/*
+@media only screen and (min-width: 992px) {
+  body {
+    width: 100%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+/*
+@media only screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+  }
+}
+*/

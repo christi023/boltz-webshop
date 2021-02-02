@@ -1,3 +1,82 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&family=Poppins:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+/*
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
+
+html {
+  display: table;
+  margin: 0px auto;
+}
+*/
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/*
+@media (max-width: 675px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100%;
+  }
+}
+
+*/ /* Custom, iPhone Retina */
+/*
+@media only screen and (min-width: 320px) {
+  body {
+    width: 100%;
+  }
+}
+
+/* Extra Small Devices, Phones */
+/*
+@media only screen and (min-width: 480px) {
+  body {
+    width: 90%;
+  }
+}
+
+/* Small Devices, Tablets */
+/*
+@media only screen and (min-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+
+/* Medium Devices, Desktops */
+/*
+@media only screen and (min-width: 992px) {
+  body {
+    width: 100%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+/*
+@media only screen and (min-width: 1200px) {
+  body {
+    width: 100%;
+  }
+}
+*/
