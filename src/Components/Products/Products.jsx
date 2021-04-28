@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 // actions
-import { getItems, AddToCart, bannerClose } from '../../actions/itemActions';
+import { AddToCart, bannerClose } from '../../actions/itemActions';
 // Components
 import ProductCard from './ProductCard';
 import Loader from '../Loader/Loader';
@@ -10,11 +10,6 @@ import Loader from '../Loader/Loader';
 import './Products.css';
 
 const Products = (props) => {
-  useEffect(() => {
-    props.getItems();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   // add to cart
   const AddToCart = (id) => {
     props.AddToCart(id);
@@ -53,4 +48,4 @@ const mapStateToProps = (state) => ({
   item: state.item,
 });
 
-export default connect(mapStateToProps, { getItems, AddToCart, bannerClose })(Products);
+export default connect(mapStateToProps, {  AddToCart, bannerClose })(Products);

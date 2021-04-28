@@ -1,19 +1,16 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
+import { connect, useSelector } from 'react-redux';
+import { selectItem, selectTotalValueOfCart } from '../../reducers/itemSelectors'
 // actions
-import { deleteItem, increaseItem, decreaseItem, getTotals } from '../../actions/itemActions';
+import { deleteItem, increaseItem, decreaseItem } from '../../actions/itemActions';
 // style
 import './Cart.css';
 
 const Cart = (props) => {
-  const { cart } = props.item;
-  // method for getting subtotal
-  const total = cart.reduce((acc, item) => acc + item.quantity * item.price, 0);
+  const totalValue = useSelector(selectTotalValueOfCart)
+  const item = useSelector(selectItem)
+  const {cart} = item
 
-  useEffect(() => {
-    props.getTotals();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <div className="cart">
@@ -39,7 +36,6 @@ const Cart = (props) => {
                       <button
                         onClick={() => {
                           props.decreaseItem(cart._id);
-                          props.getTotals();
                         }}
                       >
                         -
@@ -48,7 +44,6 @@ const Cart = (props) => {
                       <button
                         onClick={() => {
                           props.increaseItem(cart._id);
-                          props.getTotals();
                         }}
                       >
                         +
@@ -64,7 +59,6 @@ const Cart = (props) => {
                         className="fas fa-trash"
                         onClick={() => {
                           props.deleteItem(cart._id);
-                          props.getTotals();
                         }}
                       ></i>
                     </div>
@@ -78,14 +72,14 @@ const Cart = (props) => {
 
                 <h4>
                   Shipping:
-                  {total >= 100 ? <span className="free"> free </span> : `+${props.item.shipping}`}
+                  {totalValue >= 100 ? <span className="free"> free </span> : `+${item.shipping}`}
                 </h4>
                 <h4>
                   Items: <span>{cart.reduce((acc, item) => acc + item.quantity, 0)} </span>
                 </h4>
                 <h4>
                   Subtotal:
-                  <span> ${total >= 90 ? total : total + props.item.shipping}</span>
+                  <span> ${totalValue >= 90 ? totalValue : totalValue + item.shipping}</span>
                 </h4>
               </div>
             </div>
@@ -96,10 +90,6 @@ const Cart = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  item: state.item,
-});
-
-export default connect(mapStateToProps, { deleteItem, increaseItem, decreaseItem, getTotals })(
+export default connect(undefined, { deleteItem, increaseItem, decreaseItem })(
   Cart,
 );
