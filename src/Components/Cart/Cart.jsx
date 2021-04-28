@@ -1,16 +1,14 @@
 import React from 'react';
 import { connect, useSelector } from 'react-redux';
-import { selectTotalValueOfCart } from '../../reducers/itemSelectors'
+import { selectCart, selectTotalValueOfCart } from '../../reducers/itemSelectors'
 // actions
 import { deleteItem, increaseItem, decreaseItem } from '../../actions/itemActions';
 // style
 import './Cart.css';
 
 const Cart = (props) => {
-  const { cart } = props.item;
-  // method for getting subtotal
-  
   const totalValue = useSelector(selectTotalValueOfCart)
+  const cart = useSelector(selectCart)
 
 
   return (
@@ -91,10 +89,7 @@ const Cart = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  item: state.item,
-});
 
-export default connect(mapStateToProps, { deleteItem, increaseItem, decreaseItem })(
+export default connect(undefined, { deleteItem, increaseItem, decreaseItem })(
   Cart,
 );
