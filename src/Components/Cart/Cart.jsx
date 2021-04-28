@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect, useSelector } from 'react-redux';
 import { selectTotalValueOfCart } from '../../reducers/itemSelectors'
 // actions
-import { deleteItem, increaseItem, decreaseItem, getTotals } from '../../actions/itemActions';
+import { deleteItem, increaseItem, decreaseItem } from '../../actions/itemActions';
 // style
 import './Cart.css';
 
@@ -60,7 +60,6 @@ const Cart = (props) => {
                         className="fas fa-trash"
                         onClick={() => {
                           props.deleteItem(cart._id);
-                          props.getTotals();
                         }}
                       ></i>
                     </div>
@@ -96,6 +95,6 @@ const mapStateToProps = (state) => ({
   item: state.item,
 });
 
-export default connect(mapStateToProps, { deleteItem, increaseItem, decreaseItem, getTotals })(
+export default connect(mapStateToProps, { deleteItem, increaseItem, decreaseItem })(
   Cart,
 );

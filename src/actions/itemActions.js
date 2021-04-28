@@ -1,13 +1,10 @@
 // Constants or Types
 import {
-  GET_ITEMS,
   ADD_ITEMS,
   BANNER_CLOSE,
   DELETE_ITEM,
   INCREASE_ITEM,
   DECREASE_ITEM,
-  TOTAL_ITEMS,
-  DETAILS,
 } from "../constants/itemConstants";
 
 // Adding item to cart
@@ -50,19 +47,5 @@ export const decreaseItem = (id, quantity) => (dispatch) => {
     type: DECREASE_ITEM,
     payload: id,
     quantity,
-  });
-};
-
-//  for getting the total price of items inside the cart
-export const getTotals = () => (dispatch) => {
-  dispatch({
-    type: TOTAL_ITEMS,
-  });
-};
-
-//  get details
-export const getDetails = () => (dispatch) => {
-  dispatch({
-    type: DETAILS,
   });
 };
