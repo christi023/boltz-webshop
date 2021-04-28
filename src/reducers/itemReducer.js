@@ -8,9 +8,9 @@ import {
   DECREASE_ITEM,
   TOTAL_ITEMS,
   DETAILS,
-} from '../constants/itemConstants';
+} from "../constants/itemConstants";
 
-import Data from '../Components/Products/Data';
+import Data from "../Components/Products/Data";
 
 const initialState = {
   items: Data,
@@ -21,12 +21,6 @@ const initialState = {
 
 const itemReducer = (state = initialState, action) => {
   switch (action.type) {
-    // get initial state
-    case GET_ITEMS:
-      return {
-        ...state,
-      };
-
     // Adding and item
     case ADD_ITEMS:
       let existItem = state.cart.find((item) => item._id === action.payload);
@@ -62,7 +56,9 @@ const itemReducer = (state = initialState, action) => {
 
     // deleting an item
     case DELETE_ITEM:
-      const filteredCart = state.cart.filter((item) => item._id !== action.payload);
+      const filteredCart = state.cart.filter(
+        (item) => item._id !== action.payload
+      );
 
       return {
         ...state,
@@ -90,7 +86,8 @@ const itemReducer = (state = initialState, action) => {
         if (item._id === action.payload) {
           item = {
             ...item,
-            quantity: item.quantity === 1 ? (item.quantity = 1) : item.quantity - 1,
+            quantity:
+              item.quantity === 1 ? (item.quantity = 1) : item.quantity - 1,
           };
         }
         //  console.log(item.quantity);
@@ -100,17 +97,6 @@ const itemReducer = (state = initialState, action) => {
       return {
         ...state,
         cart: decResults,
-      };
-
-    //get total price
-    case TOTAL_ITEMS:
-      const totals = state.cart.reduce((acc, item) => {
-        return acc + item.price * item.quantity;
-      }, 0);
-
-      return {
-        ...state,
-        total: totals,
       };
 
     // Details

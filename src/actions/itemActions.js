@@ -8,14 +8,7 @@ import {
   DECREASE_ITEM,
   TOTAL_ITEMS,
   DETAILS,
-} from '../constants/itemConstants';
-
-// getting items to show
-export const getItems = () => {
-  return {
-    type: GET_ITEMS,
-  };
-};
+} from "../constants/itemConstants";
 
 // Adding item to cart
 export const AddToCart = (id) => (dispatch) => {

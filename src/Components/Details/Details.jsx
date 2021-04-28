@@ -1,15 +1,12 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getItems, AddToCart } from '../../actions/itemActions';
+import { AddToCart } from '../../actions/itemActions';
 // style
 import './Details.css';
 
 const Details = (props) => {
-  useEffect(() => {
-    props.getItems();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
 
   const { id } = useParams();
   // getting details with id
@@ -48,4 +45,4 @@ const mapStateToProps = (state) => ({
   item: state.item,
 });
 
-export default connect(mapStateToProps, { getItems, AddToCart })(Details);
+export default connect(mapStateToProps, { AddToCart })(Details);
