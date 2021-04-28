@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect, useSelector } from 'react-redux';
-import { selectCart, selectTotalValueOfCart } from '../../reducers/itemSelectors'
+import { selectItem, selectTotalValueOfCart } from '../../reducers/itemSelectors'
 // actions
 import { deleteItem, increaseItem, decreaseItem } from '../../actions/itemActions';
 // style
@@ -8,7 +8,8 @@ import './Cart.css';
 
 const Cart = (props) => {
   const totalValue = useSelector(selectTotalValueOfCart)
-  const cart = useSelector(selectCart)
+  const item = useSelector(selectItem)
+  const {cart} = item
 
 
   return (
@@ -71,14 +72,14 @@ const Cart = (props) => {
 
                 <h4>
                   Shipping:
-                  {totalValue >= 100 ? <span className="free"> free </span> : `+${props.item.shipping}`}
+                  {totalValue >= 100 ? <span className="free"> free </span> : `+${item.shipping}`}
                 </h4>
                 <h4>
                   Items: <span>{cart.reduce((acc, item) => acc + item.quantity, 0)} </span>
                 </h4>
                 <h4>
                   Subtotal:
-                  <span> ${totalValue >= 90 ? totalValue : totalValue + props.item.shipping}</span>
+                  <span> ${totalValue >= 90 ? totalValue : totalValue + item.shipping}</span>
                 </h4>
               </div>
             </div>
@@ -88,7 +89,6 @@ const Cart = (props) => {
     </div>
   );
 };
-
 
 export default connect(undefined, { deleteItem, increaseItem, decreaseItem })(
   Cart,
